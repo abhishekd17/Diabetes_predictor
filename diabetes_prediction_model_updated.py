@@ -66,7 +66,7 @@ classifier.fit(X_train , Y_train)
 X_train_prediction = classifier.predict(X_train)
 training_data_accuracy = accuracy_score(X_train_prediction , Y_train)
 
-print("Accuracyb Score of the training data is : " ,training_data_accuracy )
+print("Accuracy Score of the training data is : " ,training_data_accuracy )
 print('In percentage : {:.2f} %'.format(training_data_accuracy * 100))
 
 X_test_prediction = classifier.predict(X_test)
@@ -81,7 +81,7 @@ input_data_as_numpy_array = np.asarray(input_data)
 
 input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
-std_data = scaler.transform(input_data_reshaped)
+std_data = scaler.fit_transform(input_data_reshaped)
 
 print(std_data)
 
